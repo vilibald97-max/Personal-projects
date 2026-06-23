@@ -31,22 +31,15 @@
   img{max-width:100%;}
   .wrap{max-width:880px; margin:0 auto; padding:0 24px;}
   h1,h2,h3{font-family:var(--font-display);}
-
-  /* ---------- icon sprite ---------- */
   .icons{position:absolute; width:0; height:0; overflow:hidden;}
   .ic{width:17px; height:17px; flex:0 0 auto; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;}
-
-  /* ---------- hero ---------- */
   .hero{padding:64px 0 8px; position:relative;}
   .eyebrow{font-family:var(--font-mono); font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin:0;}
   h1{font-weight:600; font-size:clamp(2.3rem,6vw,4rem); line-height:1.04; letter-spacing:-.01em; margin:.4em 0 .35em;}
   .hero .sub{font-size:1.05rem; max-width:48ch; color:var(--ink-soft); margin:0 0 28px;}
-
   .stat-row{display:flex; gap:30px; flex-wrap:wrap; margin-bottom:8px;}
   .stat .n{font-family:var(--font-mono); font-size:1.25rem; font-weight:600; display:block;}
   .stat .l{font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); display:block; margin-top:2px;}
-
-  /* ---------- route ribbon ---------- */
   .ribbon{display:flex; align-items:flex-start; overflow-x:auto; padding:30px 0 10px; gap:0; -ms-overflow-style:none; scrollbar-width:none;}
   .ribbon::-webkit-scrollbar{display:none;}
   .ribbon-node{display:flex; flex-direction:column; align-items:center; gap:8px; flex:0 0 auto; min-width:84px; cursor:pointer; background:none; border:none; font:inherit; color:inherit; text-decoration:none;}
@@ -54,24 +47,19 @@
   .ribbon-node:hover .dot{transform:scale(1.25);}
   .ribbon-node .lbl{font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); white-space:nowrap;}
   .ribbon-seg{flex:1 1 auto; height:2px; min-width:18px; background:var(--seg); opacity:.55; margin-top:4.5px;}
-
   .notes{font-size:.82rem; color:var(--ink-soft); max-width:60ch; margin:6px 0 30px; line-height:1.6;}
   .notes b{color:var(--ink);}
-
-  /* ---------- sticky day nav ---------- */
   .daynav{position:sticky; top:0; z-index:30; background:rgba(231,235,225,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .daynav .wrap{display:flex; gap:6px; overflow-x:auto; padding:10px 24px; scrollbar-width:none;}
   .daynav .wrap::-webkit-scrollbar{display:none;}
   .daynav a{font-family:var(--font-mono); font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; padding:7px 13px; border-radius:999px; color:var(--ink-soft); white-space:nowrap; border:1px solid transparent; text-decoration:none; transition:background .15s, color .15s;}
   .daynav a:hover{border-color:var(--line);}
   .daynav a.active{background:var(--ink); color:var(--paper);}
-
-  /* ---------- day sections ---------- */
   main{padding-top:4px;}
   .day{padding:56px 0 12px; border-top:1px solid var(--line); scroll-margin-top:58px;}
   .day:first-of-type{border-top:none;}
   .day-head{display:flex; gap:20px; flex-wrap:wrap;}
-  .day-num{font-size:2.5rem; font-weight:600; color:var(--leg); line-height:1; flex:0 0 auto;}
+  .day-num{font-size:2.5rem; font-weight:600; color:var(--leg, var(--ink)); line-height:1; flex:0 0 auto;}
   .day-info{flex:1 1 260px;}
   .day-date{font-family:var(--font-mono); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 4px;}
   .day-info h2{font-size:clamp(1.55rem,3vw,2.1rem); margin:0 0 9px; font-weight:600;}
@@ -79,32 +67,27 @@
   .day-meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft); margin-top:14px;}
   .day-meta .chip{padding:5px 11px; border:1px solid var(--line); border-radius:999px; display:inline-flex; align-items:center; gap:6px;}
   .day-meta .chip b{color:var(--ink); font-weight:600;}
-  .day-meta .chip .ic{width:13px; height:13px; color:var(--leg);}
-
-  /* ---------- timeline ---------- */
+  .day-meta .chip .ic{width:13px; height:13px; color:var(--leg, var(--ink));}
   .timeline{position:relative; list-style:none; margin:28px 0 0; padding:0;}
-  .timeline::before{content:''; position:absolute; top:6px; bottom:6px; left:18px; width:2px; background:var(--leg); opacity:.32;}
+  .timeline::before{content:''; position:absolute; top:6px; bottom:6px; left:18px; width:2px; background:var(--leg, var(--ink)); opacity:.32;}
   .stop, .leg{position:relative; padding-left:48px;}
   .stop{padding-top:14px; padding-bottom:14px;}
-  .stop::before{content:''; position:absolute; left:11px; top:18px; width:14px; height:14px; border-radius:50%; background:var(--paper); border:3px solid var(--leg);}
+  .stop::before{content:''; position:absolute; left:11px; top:18px; width:14px; height:14px; border-radius:50%; background:var(--paper); border:3px solid var(--leg, var(--ink));}
   .leg{padding-top:9px; padding-bottom:9px;}
-  .leg::before{content:''; position:absolute; left:14px; top:50%; transform:translateY(-50%); width:8px; height:8px; border-radius:50%; background:var(--leg);}
+  .leg::before{content:''; position:absolute; left:14px; top:50%; transform:translateY(-50%); width:8px; height:8px; border-radius:50%; background:var(--leg, var(--ink));}
   time{font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft); letter-spacing:.02em; display:inline-block; margin-bottom:3px;}
   .stop h3{display:flex; align-items:center; gap:8px; font-family:var(--font-body); font-weight:600; font-size:1rem; margin:0 0 4px; color:var(--ink);}
-  .stop h3 .ic{color:var(--leg);}
+  .stop h3 .ic{color:var(--leg, var(--ink));}
   .stop p{margin:0; color:var(--ink-soft); font-size:.92rem; max-width:60ch;}
   .leg-row{display:flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:.85rem;}
-  .leg-row .ic{color:var(--leg); width:15px; height:15px;}
+  .leg-row .ic{color:var(--leg, var(--ink)); width:15px; height:15px;}
   .leg-row .route{color:var(--ink);}
-  .leg-row .dist{margin-left:auto; color:var(--leg); font-weight:600; white-space:nowrap;}
-
+  .leg-row .dist{margin-left:auto; color:var(--leg, var(--ink)); font-weight:600; white-space:nowrap;}
   .stop-flex{display:flex; gap:14px; align-items:flex-start;}
   .thumb{flex:0 0 64px; width:64px; height:64px; border-radius:10px; overflow:hidden; box-shadow:var(--shadow); display:block; background:var(--line);}
   .thumb img{width:100%; height:100%; object-fit:cover; display:block;}
   .stop-text{flex:1 1 auto; min-width:0;}
-
-  /* ---------- tips / pack ---------- */
-  .tips, .pack{padding:60px 0 8px; border-top:1px solid var(--line);}
+  .tips, .pack{padding:60px 0 8px; border-top:1px solid var(--line); scroll-margin-top:58px;}
   .tips h2, .pack h2{font-size:clamp(1.7rem,3vw,2.3rem); margin:0 0 8px; font-weight:600;}
   .tips .lead, .pack .lead{color:var(--ink-soft); max-width:62ch; margin:0 0 28px;}
   .tip-grid, .pack-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
@@ -112,24 +95,20 @@
   .tip-card .ic, .pack-card > .ic{width:20px; height:20px; color:var(--ink); margin-bottom:11px;}
   .tip-card h3, .pack-card h3{font-family:var(--font-body); font-size:.96rem; font-weight:700; margin:0 0 10px;}
   .tip-card p{margin:0; font-size:.87rem; color:var(--ink-soft); line-height:1.55;}
-
   .pack-card ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px;}
   .pack-card label{display:flex; align-items:flex-start; gap:9px; font-size:.87rem; color:var(--ink); line-height:1.45; cursor:pointer;}
   .pack-card input[type="checkbox"]{appearance:none; width:16px; height:16px; flex:0 0 auto; margin-top:1px; border:1.5px solid var(--ink-soft); border-radius:4px; cursor:pointer; position:relative; background:var(--paper);}
   .pack-card input[type="checkbox"]:checked{background:var(--leg-pack,var(--ink)); border-color:var(--leg-pack,var(--ink));}
   .pack-card input[type="checkbox"]:checked::after{content:''; position:absolute; left:4px; top:1px; width:4px; height:8px; border:solid var(--paper); border-width:0 2px 2px 0; transform:rotate(40deg);}
   .pack-card input[type="checkbox"]:checked + span{color:var(--ink-soft); text-decoration:line-through;}
-
   footer{padding:48px 0 64px; text-align:center;}
   footer p{font-family:var(--font-mono); font-size:.8rem; color:var(--ink-soft); margin:0;}
-
   @media (max-width:640px){
     .tip-grid, .pack-grid{grid-template-columns:1fr;}
     .stat-row{gap:22px;}
     .day-num{font-size:2.1rem;}
     .thumb{flex-basis:52px; width:52px; height:52px;}
   }
-
   @media (prefers-reduced-motion:no-preference){
     .day, .tips, .pack{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
     .day.in-view, .tips.in-view, .pack.in-view{opacity:1; transform:none;}
@@ -137,7 +116,6 @@
 </style>
 </head>
 <body>
-
 <svg class="icons" aria-hidden="true">
   <symbol id="i-drive" viewBox="0 0 24 24"><path d="M3 16 L4.2 10.8 Q5 9 7 9 H17 Q19 9 19.8 10.8 L21 16"/><line x1="3" y1="16" x2="21" y2="16"/><circle cx="7.5" cy="17" r="1.6"/><circle cx="16.5" cy="17" r="1.6"/></symbol>
   <symbol id="i-walk" viewBox="0 0 24 24"><ellipse cx="8.5" cy="6.5" rx="1.9" ry="2.8" transform="rotate(-18 8.5 6.5)"/><ellipse cx="15.5" cy="17" rx="1.9" ry="2.8" transform="rotate(18 15.5 17)"/></symbol>
@@ -153,7 +131,6 @@
   <symbol id="i-doc" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1.5"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></symbol>
 </svg>
-
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow">Road trip · 9–14 July</p>
@@ -185,601 +162,55 @@
     <p class="notes"><b>Two notes:</b> the weather chips on each day are typical mid-July averages, not a live forecast — forecasts only firm up about 10 days out, so check again closer to the date. And most photos below are tappable — they open the real Google Maps listing, with current photos, hours and reviews.</p>
   </div>
 </header>
-
 <nav class="daynav" aria-label="Jump to day">
   <div class="wrap">
-    <a href="#day1">Day 1 · Cambridge</a>
-    <a href="#day2">Day 2 · London</a>
-    <a href="#day3">Day 3 · York</a>
-    <a href="#day4">Day 4 · Edinburgh</a>
-    <a href="#day5">Day 5 · Highlands</a>
-    <a href="#day6">Day 6 · Home</a>
-    <a href="#pack">Packing</a>
-    <a href="#tips">Driving tips</a>
+    <a href="#day1">Day 1 · Cambridge</a><a href="#day2">Day 2 · London</a><a href="#day3">Day 3 · York</a><a href="#day4">Day 4 · Edinburgh</a><a href="#day5">Day 5 · Highlands</a><a href="#day6">Day 6 · Home</a><a href="#pack">Packing</a><a href="#tips">Driving tips</a>
   </div>
 </nav>
-
 <main class="wrap">
-
   <!-- DAY 1 -->
   <section class="day" id="day1" style="--leg:var(--sandstone)">
-    <div class="day-head">
-      <span class="day-num">01</span>
-      <div class="day-info">
-        <p class="day-date">Thursday · 9 July</p>
-        <h2>Arrival &amp; the University City</h2>
-        <p class="day-blurb">Land, collect the car, and spend the rest of the day on foot and on the water — colleges, a punt down the Cam, and a pub where DNA was announced over lunch.</p>
-        <div class="day-meta">
-          <span class="chip"><b>45 km</b> driven</span>
-          <span class="chip">Overnight in <b>Cambridge</b></span>
-          <span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~23°/13°C · ~25% rain <i>(typical)</i></span>
-        </div>
-      </div>
-    </div>
-    <ol class="timeline">
-      <li class="stop"><time>07:30–08:30</time><h3><svg class="ic"><use href="#i-flight"/></svg>Land at Stansted</h3><p>Clear passport control and collect the rental car.</p></li>
-      <li class="leg"><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Stansted → Cambridge</span><span class="dist">~45 km</span></div></li>
-      <li class="stop"><time>09:20–09:45</time><h3><svg class="ic"><use href="#i-bed"/></svg>Drop bags &amp; get your bearings</h3><p>Navigate to your accommodation and leave the luggage behind.</p></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=465965518626449723" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKFYcR_vk-PmOC84WOhPcq3kQfikHmuOxYHgjxDV0uISbo_QYZZwVQDxOh3BvCu8GRuIJ5LIic2uwqNCnswFMlDuM9zFVl0TvWuHsQIIL-Y3oTHDI5s4d0B6BM_HXupEWCnVm14PF0UI8tv0qiOyKyAw=s300" loading="lazy" alt="Judge Business School, Cambridge"></a>
-          <div class="stop-text">
-            <time>09:45–10:15</time>
-            <h3><svg class="ic"><use href="#i-coffee"/></svg>Coffee near Judge Business School</h3>
-            <p>A gentle start before the university tour gets underway.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=16373930410769050009" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCcSwmYb8H1Hc41ErjJUPdDpclFXTDS1TXy-OHKzoS8BjCOVq3vk2HpLQ2FYpgvEDjvUgo6FMMaWLSZ1JIsDGh3bBVa7fni07rrIIr8y6H1Ukf163Xx5EClL6x1VeRiaNoOejOTUcqFoz27iM=s300" loading="lazy" alt="King's College, Cambridge"></a>
-          <div class="stop-text">
-            <time>10:15–12:30</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>King's Parade &amp; the colleges</h3>
-            <p>The Corpus Clock, then the grand facades of King's, Trinity and St John's.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=15595773464073980331" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtsVpSs5lpRVpMjyhGUdjpKVEQyK82FETObfK1_sRXKp4RvsJextROz8VDfjGMl2BKQzxJQQbGpjgPsegSEAc98UMBRGlxZwCSv0n1mz4s7qUsweKfydTPBEcrjOfvmoEXQ1lyeOBsNplZ=s300" loading="lazy" alt="The Ivy Cambridge Brasserie"></a>
-          <div class="stop-text">
-            <time>12:30–14:00</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at The Ivy Cambridge Brasserie</h3>
-            <p>Enjoy a relaxed lunch in the city centre.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=17998028095369704554" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPxPmm7X5HjLwFa0LsAFN6NVS09hjhZuDZNfzYOcyIdzWBS33C2-fjQ-gKdRmggowk88bRNFpbdd5ry8OkqcHlXDLmY-1W7mu0OLEPSA7z-3jN2WMPCqK7UBb7bTIU3WItwAojDW1R1IA8dgg=s300" loading="lazy" alt="Scudamore's Punting, Cambridge"></a>
-          <div class="stop-text">
-            <time>14:00–15:30</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>Punt the River Cam</h3>
-            <p>Scudamore's is reliable. The Backs and the Bridge of Sighs are best seen from the water.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=17658248208466741153" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzqy7ODkuvxPOALMOvMGk7CRCZetxkf152MH4s6NpniU2pR-hBRln4cb3RsFRzIxwekdxbz-kxhw7xo8FAS8oUcjteaiBMSvBZUkvQVAc3Ou3kY42tFXhcuLCv1Pwu5KC18q57mShIP48mdg=s300" loading="lazy" alt="Cambridge Market Square"></a>
-          <div class="stop-text">
-            <time>15:30–17:00</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>Market Square or the Fitzwilliam Museum</h3>
-            <p>Browse the stalls, or step inside for some art instead.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=5507157693453139134" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdISKswFoIe4bDpF4JanN729DpBY1NKLIu3whRTibOSlaT6wwyurd_AusWDXmPXFyJN_3N3HyawRx3OTxIHucPoLR5H3_zCuDA9AugsJ0M2ktaOjQdUgLulB62iSWRWe1VTorofN_cYveVe0O91g6Jrw=s300" loading="lazy" alt="The Eagle, Cambridge"></a>
-          <div class="stop-text">
-            <time>17:00–19:30</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Dinner &amp; pints at The Eagle</h3>
-            <p>Where Watson and Crick announced the discovery of DNA. The RAF bar ceiling is covered in WWII pilots' graffiti.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop"><time>19:30–20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Stroll back &amp; check in properly</h3><p></p></li>
-    </ol>
+    <div class="day-head"><span class="day-num">01</span><div class="day-info"><p class="day-date">Thursday · 9 July</p><h2>Arrival &amp; the University City</h2><p class="day-blurb">Land, collect the car, and spend the rest of the day on foot and on the water — colleges, a punt down the Cam, and a pub where DNA was announced over lunch.</p><div class="day-meta"><span class="chip"><b>45 km</b> driven</span><span class="chip">Overnight in <b>Cambridge</b></span><span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~23°/13°C · ~25% rain <i>(typical)</i></span></div></div></div>
+    <ol class="timeline"><li class="stop"><time>07:30–08:30</time><h3><svg class="ic"><use href="#i-flight"/></svg>Land at Stansted</h3><p>Clear passport control and collect the rental car.</p></li><li class="leg"><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Stansted → Cambridge</span><span class="dist">~45 km</span></div></li><li class="stop"><time>09:20–09:45</time><h3><svg class="ic"><use href="#i-bed"/></svg>Drop bags &amp; get your bearings</h3><p>Navigate to your accommodation and leave the luggage behind.</p></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=465965518626449723" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNKFYcR_vk-PmOC84WOhPcq3kQfikHmuOxYHgjxDV0uISbo_QYZZwVQDxOh3BvCu8GRuIJ5LIic2uwqNCnswFMlDuM9zFVl0TvWuHsQIIL-Y3oTHDI5s4d0B6BM_HXupEWCnVm14PF0UI8tv0qiOyKyAw=s300" loading="lazy" alt="Judge Business School, Cambridge"></a><div class="stop-text"><time>09:45–10:15</time><h3><svg class="ic"><use href="#i-coffee"/></svg>Coffee near Judge Business School</h3><p>A gentle start before the university tour gets underway.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=16373930410769050009" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPCcSwmYb8H1Hc41ErjJUPdDpclFXTDS1TXy-OHKzoS8BjCOVq3vk2HpLQ2FYpgvEDjvUgo6FMMaWLSZ1JIsDGh3bBVa7fni07rrIIr8y6H1Ukf163Xx5EClL6x1VeRiaNoOejOTUcqFoz27iM=s300" loading="lazy" alt="King's College, Cambridge"></a><div class="stop-text"><time>10:15–12:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>King's Parade &amp; the colleges</h3><p>The Corpus Clock, then the grand facades of King's, Trinity and St John's.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=15595773464073980331" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtsVpSs5lpRVpMjyhGUdjpKVEQyK82FETObfK1_sRXKp4RvsJextROz8VDfjGMl2BKQzxJQQbGpjgPsegSEAc98UMBRGlxZwCSv0n1mz4s7qUsweKfydTPBEcrjOfvmoEXQ1lyeOBsNplZ=s300" loading="lazy" alt="The Ivy Cambridge Brasserie"></a><div class="stop-text"><time>12:30–14:00</time><h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at The Ivy Cambridge Brasserie</h3><p>Enjoy a relaxed lunch in the city centre.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=17998028095369704554" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPxPmm7X5HjLwFa0LsAFN6NVS09hjhZuDZNfzYOcyIdzWBS33C2-fjQ-gKdRmggowk88bRNFpbdd5ry8OkqcHlXDLmY-1W7mu0OLEPSA7z-3jN2WMPCqK7UBb7bTIU3WItwAojDW1R1IA8dgg=s300" loading="lazy" alt="Scudamore's Punting, Cambridge"></a><div class="stop-text"><time>14:00–15:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>Punt the River Cam</h3><p>Scudamore's is reliable. The Backs and the Bridge of Sighs are best seen from the water.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=17658248208466741153" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOzqy7ODkuvxPOALMOvMGk7CRCZetxkf152MH4s6NpniU2pR-hBRln4cb3RsFRzIxwekdxbz-kxhw7xo8FAS8oUcjteaiBMSvBZUkvQVAc3Ou3kY42tFXhcuLCv1Pwu5KC18q57mShIP48mdg=s300" loading="lazy" alt="Cambridge Market Square"></a><div class="stop-text"><time>15:30–17:00</time><h3><svg class="ic"><use href="#i-sight"/></svg>Market Square or the Fitzwilliam Museum</h3><p>Browse the stalls, or step inside for some art instead.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=5507157693453139134" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNdISKswFoIe4bDpF4JanN729DpBY1NKLIu3whRTibOSlaT6wwyurd_AusWDXmPXFyJN_3N3HyawRx3OTxIHucPoLR5H3_zCuDA9AugsJ0M2ktaOjQdUgLulB62iSWRWe1VTorofN_cYveVe0O91g6Jrw=s300" loading="lazy" alt="The Eagle, Cambridge"></a><div class="stop-text"><time>17:00–19:30</time><h3><svg class="ic"><use href="#i-meal"/></svg>Dinner &amp; pints at The Eagle</h3><p>Where Watson and Crick announced the discovery of DNA. The RAF bar ceiling is covered in WWII pilots' graffiti.</p></div></div></li><li class="stop"><time>19:30–20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Stroll back &amp; check in properly</h3></li></ol>
   </section>
-
   <!-- DAY 2 -->
   <section class="day" id="day2" style="--leg:var(--sandstone)">
-    <div class="day-head">
-      <span class="day-num">02</span>
-      <div class="day-info">
-        <p class="day-date">Friday · 10 July</p>
-        <h2>London Day Trip</h2>
-        <p class="day-blurb">Leave the car in Cambridge and let the Tube do the work: palace, Parliament, a market lunch and a skyscraper view over the Thames, all before driving back for the night.</p>
-        <div class="day-meta">
-          <span class="chip"><b>190 km</b> driven (round trip)</span>
-          <span class="chip">Overnight in <b>Cambridge</b></span>
-          <span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~23°/14°C · ~30% rain <i>(typical)</i></span>
-        </div>
-      </div>
-    </div>
-    <ol class="timeline">
-      <li class="stop"><time>08:45–09:00</time><h3><svg class="ic"><use href="#i-coffee"/></svg>Coffee to go</h3><p></p></li>
-      <li class="leg"><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Cambridge → King's Cross</span><span class="dist">~95 km</span></div></li>
-      <li class="leg"><time>11:00–11:15</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Park near King's Cross</span><span class="dist"></span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=731461058599387815" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFC_SPMKSpmU1pat4UHtgmS__ekCqa6vnQpoiw-gYK1cFWZ5FFf01qYsEmLuGfGYyauUYECuR4hcv9vowG7LWiy2BW_b2CKkkW23TyljcdPS2gqkle1DjAsNwmzmqc91zKWcFjTuA1eOcm0xM=s300" loading="lazy" alt="Buckingham Palace"></a>
-          <div class="stop-text">
-            <time>11:15–11:45</time>
-            <h3><svg class="ic"><use href="#i-walk"/></svg>Tube to Green Park</h3>
-            <p>Walk through the park to the gates of Buckingham Palace.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=13226830714359798441" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtb5EN_oy5SQwIQ7H4FExDEqT21ioKMdnTl_ht5f75LSgd3amcfW06uhlZzJhKu1NVkTh5aVDUdPjr-K7yZymHWBZZakulO_lCYWANzKB2JMRfuagcmNZQ1UJ4YUjzOavuHNJ5O1tcq4USzww=s300" loading="lazy" alt="Big Ben, Westminster"></a>
-          <div class="stop-text">
-            <time>11:45–13:30</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>St James's Park to Trafalgar Square</h3>
-            <p>Parliament, Big Ben and Westminster Abbey, then up Whitehall past Downing Street.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=10516203799323156550" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyfvXbX0O2Q0UdWMErvHDztbfMVQFGOpS2ZJq07c_iI6nReSDhFmTo8RDnpro5gE5Zn4IqthuGWUm5x0E07iv83c95LMjSrPFkrRHbWTo0uSY573NR1IrdhOwVgfQyzu11j9Hh9fIBlrtJN2k=s300" loading="lazy" alt="Covent Garden"></a>
-          <div class="stop-text">
-            <time>13:30–14:45</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Lunch in Covent Garden</h3>
-            <p>The bustling piazza and street performers make for lively people-watching.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop"><time>14:45–15:15</time><h3><svg class="ic"><use href="#i-walk"/></svg>Into the City of London</h3><p>Tube it, or take a brisk walk down the Strand and Fleet Street.</p></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=15354298128763884164" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOS4tycW2ij6X_ienaC4LfoXr9k6gBLJ121K0SpTi4a33z-u-hrhMWeN5yYLUrgqu-tXctDA0ehqZnloRwwooN17mlIof1But2dvR0qIsCV9tQ-uoCfZ5jXbRUHMJE04dUDStJA47X0sRXu4VteoqTKg=s300" loading="lazy" alt="Sky Garden, London"></a>
-          <div class="stop-text">
-            <time>15:15–16:45</time>
-            <h3><svg class="ic"><use href="#i-view"/></svg>Horizon 22 or Sky Garden</h3>
-            <p>Pre-book free tickets. Sweeping views over the Thames and the financial district.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=3542336080288171193" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNfeDR7i9tkLxrER0C_wL4aQoh1zT54UwIcnar-Yz-ExN-UWbjwtgRQM68wa6U9YK-6pS4ymjuGsXbotS5FNiFnYG86xdlbAqsV3aRxRxi9djLxiUYzhmXxlW9Fcw75fwpqlRGGEfdNpkVKWA=s300" loading="lazy" alt="Borough Market"></a>
-          <div class="stop-text">
-            <time>16:45–17:30</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Borough Market, then back to King's Cross</h3>
-            <p>Cross London Bridge on foot for an artisanal snack, then the Northern Line home.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>17:30–18:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Pick up the car</span><span class="dist"></span></div></li>
-      <li class="leg"><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">King's Cross → Cambridge</span><span class="dist">~95 km</span></div></li>
-      <li class="stop"><time>20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Back at the Cambridge accommodation</h3><p></p></li>
-    </ol>
+    <div class="day-head"><span class="day-num">02</span><div class="day-info"><p class="day-date">Friday · 10 July</p><h2>London Day Trip</h2><p class="day-blurb">Leave the car in Cambridge and let the Tube do the work: palace, Parliament, a market lunch and a skyscraper view over the Thames, all before driving back for the night.</p><div class="day-meta"><span class="chip"><b>190 km</b> driven (round trip)</span><span class="chip">Overnight in <b>Cambridge</b></span><span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~23°/14°C · ~30% rain <i>(typical)</i></span></div></div></div>
+    <ol class="timeline"><li class="stop"><time>08:45–09:00</time><h3><svg class="ic"><use href="#i-coffee"/></svg>Coffee to go</h3></li><li class="leg"><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Cambridge → King's Cross</span><span class="dist">~95 km</span></div></li><li class="leg"><time>11:00–11:15</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Park near King's Cross</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=731461058599387815" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPFC_SPMKSpmU1pat4UHtgmS__ekCqa6vnQpoiw-gYK1cFWZ5FFf01qYsEmLuGfGYyauUYECuR4hcv9vowG7LWiy2BW_b2CKkkW23TyljcdPS2gqkle1DjAsNwmzmqc91zKWcFjTuA1eOcm0xM=s300" loading="lazy" alt="Buckingham Palace"></a><div class="stop-text"><time>11:15–11:45</time><h3><svg class="ic"><use href="#i-walk"/></svg>Tube to Green Park</h3><p>Walk through the park to the gates of Buckingham Palace.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=13226830714359798441" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOtb5EN_oy5SQwIQ7H4FExDEqT21ioKMdnTl_ht5f75LSgd3amcfW06uhlZzJhKu1NVkTh5aVDUdPjr-K7yZymHWBZZakulO_lCYWANzKB2JMRfuagcmNZQ1UJ4YUjzOavuHNJ5O1tcq4USzww=s300" loading="lazy" alt="Big Ben, Westminster"></a><div class="stop-text"><time>11:45–13:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>St James's Park to Trafalgar Square</h3><p>Parliament, Big Ben and Westminster Abbey, then up Whitehall past Downing Street.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=10516203799323156550" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPyfvXbX0O2Q0UdWMErvHDztbfMVQFGOpS2ZJq07c_iI6nReSDhFmTo8RDnpro5gE5Zn4IqthuGWUm5x0E07iv83c95LMjSrPFkrRHbWTo0uSY573NR1IrdhOwVgfQyzu11j9Hh9fIBlrtJN2k=s300" loading="lazy" alt="Covent Garden"></a><div class="stop-text"><time>13:30–14:45</time><h3><svg class="ic"><use href="#i-meal"/></svg>Lunch in Covent Garden</h3><p>The bustling piazza and street performers make for lively people-watching.</p></div></div></li><li class="stop"><time>14:45–15:15</time><h3><svg class="ic"><use href="#i-walk"/></svg>Into the City of London</h3><p>Tube it, or take a brisk walk down the Strand and Fleet Street.</p></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=15354298128763884164" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNOS4tycW2ij6X_ienaC4LfoXr9k6gBLJ121K0SpTi4a33z-u-hrhMWeN5yYLUrgqu-tXctDA0ehqZnloRwwooN17mlIof1But2dvR0qIsCV9tQ-uoCfZ5jXbRUHMJE04dUDStJA47X0sRXu4VteoqTKg=s300" loading="lazy" alt="Sky Garden, London"></a><div class="stop-text"><time>15:15–16:45</time><h3><svg class="ic"><use href="#i-view"/></svg>Horizon 22 or Sky Garden</h3><p>Pre-book free tickets. Sweeping views over the Thames and the financial district.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=3542336080288171193" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNfeDR7i9tkLxrER0C_wL4aQoh1zT54UwIcnar-Yz-ExN-UWbjwtgRQM68wa6U9YK-6pS4ymjuGsXbotS5FNiFnYG86xdlbAqsV3aRxRxi9djLxiUYzhmXxlW9Fcw75fwpqlRGGEfdNpkVKWA=s300" loading="lazy" alt="Borough Market"></a><div class="stop-text"><time>16:45–17:30</time><h3><svg class="ic"><use href="#i-meal"/></svg>Borough Market, then back to King's Cross</h3><p>Cross London Bridge on foot for an artisanal snack, then the Northern Line home.</p></div></div></li><li class="leg"><time>17:30–18:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Pick up the car</span></div></li><li class="leg"><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">King's Cross → Cambridge</span><span class="dist">~95 km</span></div></li><li class="stop"><time>20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Back at the Cambridge accommodation</h3></li></ol>
   </section>
-
   <!-- DAY 3 -->
   <section class="day" id="day3" style="--leg:var(--sandstone)">
-    <div class="day-head">
-      <span class="day-num">03</span>
-      <div class="day-info">
-        <p class="day-date">Saturday · 11 July</p>
-        <h2>York, via the A1</h2>
-        <p class="day-blurb">A scenic run up the A1 with a stop in a film-set town, then into York's walled centre for a Roman cathedral, a medieval alley and a walk along the city walls.</p>
-        <div class="day-meta">
-          <span class="chip"><b>245 km</b> driven</span>
-          <span class="chip">Overnight in <b>York</b></span>
-          <span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~21°/12°C · ~35% rain <i>(typical)</i></span>
-        </div>
-      </div>
-    </div>
-    <ol class="timeline">
-      <li class="leg"><time>09:00–10:10</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Cambridge → Stamford</span><span class="dist">~75 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=12521750885615163511" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9qos9mLyL8R6MGfQ92nDJyRp6zCHswbRVcZDwowk4RLIz8gCZh_X0n0XU0e0G8S3xUEhMpkA7XUHSdDbV4HWHottNfoFzHI2a0jfW__fQdbfESsUfEdOdSkt1h02p2T1rGGKcWO-DlzXpqZ0=s300" loading="lazy" alt="Fika Stamford"></a>
-          <div class="stop-text">
-            <time>10:10–11:00</time>
-            <h3><svg class="ic"><use href="#i-coffee"/></svg>Coffee at Fika Stamford</h3>
-            <p>Walk the 17th-century stone streets — a frequent film set for period dramas, and far better than a service-station break.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>11:00–13:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Stamford → York</span><span class="dist">~170 km</span></div></li>
-      <li class="leg"><time>13:00–13:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Park up &amp; walk into the walled centre</span><span class="dist"></span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=18093916051228152266" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEnZfJii-QMDRh5mQGMIp1IOVfQVHV4hwatqWZn6o6uyZRVb6hrX6Z7orusatciHWProlu6XRjaebKelb9YbJhomXoVTblg9chVwXSymQOAMezjDRgqERkoSg9klAW9GgpqHa4lfRgAXH8IJc=s300" loading="lazy" alt="The York Roast Co."></a>
-          <div class="stop-text">
-            <time>13:30–14:45</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Yorkshire Pudding Wrap, The York Roast Co.</h3>
-            <p>Eat it on the move.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=1168633228613109664" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5-sCeJrp6YfCU20dRZYbjN96plZKxfyZfnGsEUTwW_fk6bWscOXy47E2j_lWLmp8BZqgIH4j_-YDfapGk6nJXDPjp6nxDZf_H78fk6soYIqCqm9vfbCIhwB_Oi-8SdGjCgBd7M4EtFaNYkA4=s300" loading="lazy" alt="The Shambles, York"></a>
-          <div class="stop-text">
-            <time>14:45–15:30</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>The Shambles</h3>
-            <p>Europe's most preserved medieval street — the real-life inspiration for Diagon Alley.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=10942280702338534709" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIwVWGHe_AN73rNbIsTKFCFdSS9cuDuytlVWRAOfeOahpzoBi_fpnNs5MeZoMKNKPO_PIqZp93mGfbuC4YtFYuleNu2nhhCipk3Twjk3tNvkOWmpm1uGkLklLuaZu9DaBSzNT9rnJ3Q-zXk_8=s300" loading="lazy" alt="York Minster"></a>
-          <div class="stop-text">
-            <time>15:30–17:00</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>York Minster &amp; the Undercroft</h3>
-            <p>Gothic architecture above, Roman ruins below.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=9640674322187106404" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4frxYRoP3pPuexTTZ5w6RuzHo7jusmaAa1Yzsn1zM4gG3ywp2YURwKkKvUIAQLs-icvlHnm2GF_oZ1vzGAo_or8VctYLizJ_E9y1P3W6klc4jlVQXegCXxRYpvQDUf-pp0G6h1I5XjPXuFQ=s300" loading="lazy" alt="York City Walls"></a>
-          <div class="stop-text">
-            <time>17:00–18:30</time>
-            <h3><svg class="ic"><use href="#i-view"/></svg>Walk the City Walls</h3>
-            <p>A 45-minute elevated stretch with great views over the rooftops.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop"><time>18:30–20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Check in &amp; freshen up</h3><p></p></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=2920862297847491262" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZML8kux1nypX8N7bZ-YzlkqDtz2xxxNv1IuQ5g5NBCKSlLtasSJ2SEWU-dZu5JmyQznyecshdBAF8i90kYiwjcLs9fxcGy5_GhTAkATxBFEU7uBD2NFjnU1s6U-NQFbdrpAENFGKE8mF570Pbo=s300" loading="lazy" alt="Guy Fawkes Inn, York"></a>
-          <div class="stop-text">
-            <time>20:00</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Dinner at The Guy Fawkes Inn</h3>
-            <p>Born in the shadow of the Minster.</p>
-          </div>
-        </div>
-      </li>
-    </ol>
+    <div class="day-head"><span class="day-num">03</span><div class="day-info"><p class="day-date">Saturday · 11 July</p><h2>York, via the A1</h2><p class="day-blurb">A scenic run up the A1 with a stop in a film-set town, then into York's walled centre for a Roman cathedral, a medieval alley and a walk along the city walls.</p><div class="day-meta"><span class="chip"><b>245 km</b> driven</span><span class="chip">Overnight in <b>York</b></span><span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~21°/12°C · ~35% rain <i>(typical)</i></span></div></div></div>
+    <ol class="timeline"><li class="leg"><time>09:00–10:10</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Cambridge → Stamford</span><span class="dist">~75 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=12521750885615163511" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN9qos9mLyL8R6MGfQ92nDJyRp6zCHswbRVcZDwowk4RLIz8gCZh_X0n0XU0e0G8S3xUEhMpkA7XUHSdDbV4HWHottNfoFzHI2a0jfW__fQdbfESsUfEdOdSkt1h02p2T1rGGKcWO-DlzXpqZ0=s300" loading="lazy" alt="Fika Stamford"></a><div class="stop-text"><time>10:10–11:00</time><h3><svg class="ic"><use href="#i-coffee"/></svg>Coffee at Fika Stamford</h3><p>Walk the 17th-century stone streets — a frequent film set for period dramas, and far better than a service-station break.</p></div></div></li><li class="leg"><time>11:00–13:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Stamford → York</span><span class="dist">~170 km</span></div></li><li class="leg"><time>13:00–13:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Park up &amp; walk into the walled centre</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=18093916051228152266" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPEnZfJii-QMDRh5mQGMIp1IOVfQVHV4hwatqWZn6o6uyZRVb6hrX6Z7orusatciHWProlu6XRjaebKelb9YbJhomXoVTblg9chVwXSymQOAMezjDRgqERkoSg9klAW9GgpqHa4lfRgAXH8IJc=s300" loading="lazy" alt="The York Roast Co."></a><div class="stop-text"><time>13:30–14:45</time><h3><svg class="ic"><use href="#i-meal"/></svg>Yorkshire Pudding Wrap, The York Roast Co.</h3><p>Eat it on the move.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=1168633228613109664" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZM5-sCeJrp6YfCU20dRZYbjN96plZKxfyZfnGsEUTwW_fk6bWscOXy47E2j_lWLmp8BZqgIH4j_-YDfapGk6nJXDPjp6nxDZf_H78fk6soYIqCqm9vfbCIhwB_Oi-8SdGjCgBd7M4EtFaNYkA4=s300" loading="lazy" alt="The Shambles, York"></a><div class="stop-text"><time>14:45–15:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>The Shambles</h3><p>Europe's most preserved medieval street — the real-life inspiration for Diagon Alley.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=10942280702338534709" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOIwVWGHe_AN73rNbIsTKFCFdSS9cuDuytlVWRAOfeOahpzoBi_fpnNs5MeZoMKNKPO_PIqZp93mGfbuC4YtFYuleNu2nhhCipk3Twjk3tNvkOWmpm1uGkLklLuaZu9DaBSzNT9rnJ3Q-zXk_8=s300" loading="lazy" alt="York Minster"></a><div class="stop-text"><time>15:30–17:00</time><h3><svg class="ic"><use href="#i-sight"/></svg>York Minster &amp; the Undercroft</h3><p>Gothic architecture above, Roman ruins below.</p></div></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=9640674322187106404" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZN4frxYRoP3pPuexTTZ5w6RuzHo7jusmaAa1Yzsn1zM4gG3ywp2YURwKkKvUIAQLs-icvlHnm2GF_oZ1vzGAo_or8VctYLizJ_E9y1P3W6klc4jlVQXegCXxRYpvQDUf-pp0G6h1I5XjPXuFQ=s300" loading="lazy" alt="York City Walls"></a><div class="stop-text"><time>17:00–18:30</time><h3><svg class="ic"><use href="#i-view"/></svg>Walk the City Walls</h3><p>A 45-minute elevated stretch with great views over the rooftops.</p></div></div></li><li class="stop"><time>18:30–20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Check in &amp; freshen up</h3></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=2920862297847491262" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZML8kux1nypX8N7bZ-YzlkqDtz2xxxNv1IuQ5g5NBCKSlLtasSJ2SEWU-dZu5JmyQznyecshdBAF8i90kYiwjcLs9fxcGy5_GhTAkATxBFEU7uBD2NFjnU1s6U-NQFbdrpAENFGKE8mF570Pbo=s300" loading="lazy" alt="Guy Fawkes Inn, York"></a><div class="stop-text"><time>20:00</time><h3><svg class="ic"><use href="#i-meal"/></svg>Dinner at The Guy Fawkes Inn</h3><p>Born in the shadow of the Minster.</p></div></div></li></ol>
   </section>
-
   <!-- DAY 4 -->
   <section class="day" id="day4" style="--leg:var(--heather)">
-    <div class="day-head">
-      <span class="day-num">04</span>
-      <div class="day-info">
-        <p class="day-date">Sunday · 12 July</p>
-        <h2>Edinburgh &amp; the Scenic Coast</h2>
-        <p class="day-blurb">The coast road north past Alnwick Castle, then the Royal Mile, its hidden closes, and the best skyline in Scotland from the top of Calton Hill.</p>
-        <div class="day-meta">
-          <span class="chip"><b>315 km</b> driven</span>
-          <span class="chip">Overnight in <b>Edinburgh</b></span>
-          <span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~19°/12°C · ~40% rain <i>(typical)</i></span>
-        </div>
-      </div>
-    </div>
-    <ol class="timeline">
-      <li class="leg"><time>09:00–11:15</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">York → Alnwick</span><span class="dist">~180 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=13938614397876414701" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeSYQEYhBGAgQ4DejBz7LYOxpoumpTtP5U5m_2f8QZhmSfPbvWVVBq71H41ZQkxNm6DkXB5515v7Qkdug0TgYWrz9yXmltj3JYsyhGtqv2Q3zvhEETxf5DWo6A9xXecf8Ru9Wmnz5993VoWLJt7zrgkw=s300" loading="lazy" alt="Dirty Bottles, Alnwick"></a>
-          <div class="stop-text">
-            <time>11:15–12:45</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at Dirty Bottles, Alnwick</h3>
-            <p>Excellent smokehouse BBQ. A five-minute walk takes you to the imposing exterior of Alnwick Castle.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>12:45–14:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Alnwick → Edinburgh</span><span class="dist">~135 km</span></div></li>
-      <li class="leg"><time>14:30–15:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Arrive in Edinburgh, find parking</span><span class="dist"></span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=3912169492197853982" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPE2L4PUElqhOC1WJ42Aa9JYli_3CmjHEU6lSfze7npUZ9AUW3Ex8qK545l9CVUI0tdhtDMMxwdXLK9EUQYNrt_TZaF4pOi0TFkRcqS-VkslSi7R96HiHQof9FqcPX-ErymC--GL_8_EfJ0wA=s300" loading="lazy" alt="Royal Mile, Edinburgh"></a>
-          <div class="stop-text">
-            <time>15:00–16:30</time>
-            <h3><svg class="ic"><use href="#i-sight"/></svg>The Royal Mile &amp; Victoria Street</h3>
-            <p>Start near the Castle esplanade and wind down, detouring along the curving, colourful street.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop"><time>16:30–17:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>Explore a close</h3><p>One of the narrow, steep alleyways off the Royal Mile — atmospheric and steeped in dark history.</p></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=10484861952257910493" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5udp5oAkLfsIsLLjJEx4ysE7JgguWFiSOqGkAh3KEl_IKcZMifZ-2qB2PTBR6QU7j_tgL9IbHme6UxnEMfb-WAu34bRCg2HfxMiGi6uM5bTTAcq00Nxt0OU9F3JLiRioets5F_i5ZBUJhZ24=s300" loading="lazy" alt="Calton Hill, Edinburgh"></a>
-          <div class="stop-text">
-            <time>17:30–18:30</time>
-            <h3><svg class="ic"><use href="#i-view"/></svg>Calton Hill</h3>
-            <p>A short, easy climb for the best panoramic views of the skyline and Arthur's Seat in the late afternoon light.</p>
-          </div>
-        </div>
-      </li>
-      <li class="stop"><time>18:30–20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Check in</h3><p></p></li>
-      <li class="stop"><time>20:00</time><h3><svg class="ic"><use href="#i-meal"/></svg>Dinner in the Grassmarket or New Town</h3><p></p></li>
-    </ol>
+    <div class="day-head"><span class="day-num">04</span><div class="day-info"><p class="day-date">Sunday · 12 July</p><h2>Edinburgh &amp; the Scenic Coast</h2><p class="day-blurb">The coast road north past Alnwick Castle, then the Royal Mile, its hidden closes, and the best skyline in Scotland from the top of Calton Hill.</p><div class="day-meta"><span class="chip"><b>315 km</b> driven</span><span class="chip">Overnight in <b>Edinburgh</b></span><span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~19°/12°C · ~40% rain <i>(typical)</i></span></div></div></div>
+    <ol class="timeline"><li class="leg"><time>09:00–11:15</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">York → Alnwick</span><span class="dist">~180 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=13938614397876414701" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMeSYQEYhBGAgQ4DejBz7LYOxpoumpTtP5U5m_2f8QZhmSfPbvWVVBq71H41ZQkxNm6DkXB5515v7Qkdug0TgYWrz9yXmltj3JYsyhGtqv2Q3zvhEETxf5DWo6A9xXecf8Ru9Wmnz5993VoWLJt7zrgkw=s300" loading="lazy" alt="Dirty Bottles, Alnwick"></a><div class="stop-text"><time>11:15–12:45</time><h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at Dirty Bottles, Alnwick</h3><p>Excellent smokehouse BBQ. A five-minute walk takes you to the imposing exterior of Alnwick Castle.</p></div></div></li><li class="leg"><time>12:45–14:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Alnwick → Edinburgh</span><span class="dist">~135 km</span></div></li><li class="leg"><time>14:30–15:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Arrive in Edinburgh, find parking</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=3912169492197853982" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPE2L4PUElqhOC1WJ42Aa9JYli_3CmjHEU6lSfze7npUZ9AUW3Ex8qK545l9CVUI0tdhtDMMxwdXLK9EUQYNrt_TZaF4pOi0TFkRcqS-VkslSi7R96HiHQof9FqcPX-ErymC--GL_8_EfJ0wA=s300" loading="lazy" alt="Royal Mile, Edinburgh"></a><div class="stop-text"><time>15:00–16:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>The Royal Mile &amp; Victoria Street</h3><p>Start near the Castle esplanade and wind down, detouring along the curving, colourful street.</p></div></div></li><li class="stop"><time>16:30–17:30</time><h3><svg class="ic"><use href="#i-sight"/></svg>Explore a close</h3><p>One of the narrow, steep alleyways off the Royal Mile — atmospheric and steeped in dark history.</p></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=10484861952257910493" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZP5udp5oAkLfsIsLLjJEx4ysE7JgguWFiSOqGkAh3KEl_IKcZMifZ-2qB2PTBR6QU7j_tgL9IbHme6UxnEMfb-WAu34bRCg2HfxMiGi6uM5bTTAcq00Nxt0OU9F3JLiRioets5F_i5ZBUJhZ24=s300" loading="lazy" alt="Calton Hill, Edinburgh"></a><div class="stop-text"><time>17:30–18:30</time><h3><svg class="ic"><use href="#i-view"/></svg>Calton Hill</h3><p>A short, easy climb for the best panoramic views of the skyline and Arthur's Seat in the late afternoon light.</p></div></div></li><li class="stop"><time>18:30–20:00</time><h3><svg class="ic"><use href="#i-bed"/></svg>Check in</h3></li><li class="stop"><time>20:00</time><h3><svg class="ic"><use href="#i-meal"/></svg>Dinner in the Grassmarket or New Town</h3></li></ol>
   </section>
-
   <!-- DAY 5 -->
   <section class="day" id="day5" style="--leg:var(--loch)">
-    <div class="day-head">
-      <span class="day-num">05</span>
-      <div class="day-info">
-        <p class="day-date">Monday · 13 July</p>
-        <h2>Glencoe &amp; Glenfinnan</h2>
-        <p class="day-blurb">Into the glens: the Three Sisters of Glencoe, a viaduct made famous on screen, and the shores of Loch Shiel, before bedding down under the mountains.</p>
-        <div class="day-meta">
-          <span class="chip"><b>310 km</b> driven</span>
-          <span class="chip">Overnight in <b>Ballachulish</b></span>
-          <span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~17°/10°C · ~65% rain <i>(typical)</i></span>
-        </div>
-      </div>
-    </div>
-    <ol class="timeline">
-      <li class="leg"><time>09:00–11:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Edinburgh → Glencoe (Three Sisters viewpoint)</span><span class="dist">~190 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=9784445770673244509" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMOPlMisyG27k3pTjzXAXklPh5AuyNpLoOhC9of9bhP_qhUvMxWrOQ_gG0jNFX6ckzBVkxxS3Y6v9wENArwO2A59zkE28cRGUK6PaDqgsQWTGsTIlt6EO5bcqkxf71zskZJUexdXO_ivXH9Jw=s300" loading="lazy" alt="Three Sisters viewpoint, Glencoe"></a>
-          <div class="stop-text">
-            <time>11:30–12:15</time>
-            <h3><svg class="ic"><use href="#i-view"/></svg>Walk the lower trails</h3>
-            <p>30 minutes into the valley to take in the true scale of the ridges.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>12:15–12:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Viewpoint → Glencoe Village</span><span class="dist">~10 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=16500707878532360755" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMkfKB-Q5gtTi1w58CjuhcDsE30UrMPTKIYZcxZR6BiUEYvMrZCPKSREFKX5SZKNtfcg3ajBa-RJ7y6p1h-wJRY5m4CeSewXfrJdoaoJZ7Kfru0YJf71r39La9vbQFwqnSLh-ZyLtXPw0dC_nKXjQ90iw=s300" loading="lazy" alt="Crafts & Things, Glencoe"></a>
-          <div class="stop-text">
-            <time>12:30–13:30</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at Crafts &amp; Things</h3>
-            <p>Good local baking, plus a browse of Scottish crafts.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>13:30–14:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Glencoe → Glenfinnan</span><span class="dist">~60 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=17848749755060862951" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNeDHRoOO_f_60uAuAgtmV7hbEb1PIXAOKIiXUC7XsbESgsLQ7OpqLlU6S_nFaDjI9_5S6fiHskUS8a568yOprSY5c8rYW07kemhKaBMB0VZAAyG6ln8dk9mGBbT2h8xPSgjMdqlV6RjuxnN3A=s300" loading="lazy" alt="Glenfinnan Viaduct"></a>
-          <div class="stop-text">
-            <time>14:30–16:30</time>
-            <h3><svg class="ic"><use href="#i-view"/></svg>The Glenfinnan Viaduct &amp; Loch Shiel</h3>
-            <p>Walk up to the viaduct viewpoint, then down to the shore to see the Jacobite Monument.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>16:30–17:15</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Glenfinnan → Ballachulish</span><span class="dist">~50 km</span></div></li>
-      <li class="stop"><time>17:15–18:30</time><h3><svg class="ic"><use href="#i-bed"/></svg>Check in &amp; relax</h3><p></p></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=9019641930817997657" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqmVTh4p73ObzUkRWKrtc0Rb4MLgTuxAXgk7XCso7HXAga5dgyW2rhZxL3oZp_-jnpJ7LX98m-jyFPCH8Bsik0p1SAjzKScxfynRjfqp8laAZC_MoqOQC0i3HlNdX9ukOeXRVONNM2GJXEBXs=s300" loading="lazy" alt="The Laroch Restaurant, Ballachulish"></a>
-          <div class="stop-text">
-            <time>18:30</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Highland dinner at The Laroch Restaurant</h3>
-            <p></p>
-          </div>
-        </div>
-      </li>
-    </ol>
+    <div class="day-head"><span class="day-num">05</span><div class="day-info"><p class="day-date">Monday · 13 July</p><h2>Glencoe &amp; Glenfinnan</h2><p class="day-blurb">Into the glens: the Three Sisters of Glencoe, a viaduct made famous on screen, and the shores of Loch Shiel, before bedding down under the mountains.</p><div class="day-meta"><span class="chip"><b>310 km</b> driven</span><span class="chip">Overnight in <b>Ballachulish</b></span><span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~17°/10°C · ~65% rain <i>(typical)</i></span></div></div></div>
+    <ol class="timeline"><li class="leg"><time>09:00–11:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Edinburgh → Glencoe (Three Sisters viewpoint)</span><span class="dist">~190 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=9784445770673244509" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMOPlMisyG27k3pTjzXAXklPh5AuyNpLoOhC9of9bhP_qhUvMxWrOQ_gG0jNFX6ckzBVkxxS3Y6v9wENArwO2A59zkE28cRGUK6PaDqgsQWTGsTIlt6EO5bcqkxf71zskZJUexdXO_ivXH9Jw=s300" loading="lazy" alt="Three Sisters viewpoint, Glencoe"></a><div class="stop-text"><time>11:30–12:15</time><h3><svg class="ic"><use href="#i-view"/></svg>Walk the lower trails</h3><p>30 minutes into the valley to take in the true scale of the ridges.</p></div></div></li><li class="leg"><time>12:15–12:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Viewpoint → Glencoe Village</span><span class="dist">~10 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=16500707878532360755" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMkfKB-Q5gtTi1w58CjuhcDsE30UrMPTKIYZcxZR6BiUEYvMrZCPKSREFKX5SZKNtfcg3ajBa-RJ7y6p1h-wJRY5m4CeSewXfrJdoaoJZ7Kfru0YJf71r39La9vbQFwqnSLh-ZyLtXPw0dC_nKXjQ90iw=s300" loading="lazy" alt="Crafts &amp; Things, Glencoe"></a><div class="stop-text"><time>12:30–13:30</time><h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at Crafts &amp; Things</h3><p>Good local baking, plus a browse of Scottish crafts.</p></div></div></li><li class="leg"><time>13:30–14:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Glencoe → Glenfinnan</span><span class="dist">~60 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=17848749755060862951" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNeDHRoOO_f_60uAuAgtmV7hbEb1PIXAOKIiXUC7XsbESgsLQ7OpqLlU6S_nFaDjI9_5S6fiHskUS8a568yOprSY5c8rYW07kemhKaBMB0VZAAyG6ln8dk9mGBbT2h8xPSgjMdqlV6RjuxnN3A=s300" loading="lazy" alt="Glenfinnan Viaduct"></a><div class="stop-text"><time>14:30–16:30</time><h3><svg class="ic"><use href="#i-view"/></svg>The Glenfinnan Viaduct &amp; Loch Shiel</h3><p>Walk up to the viaduct viewpoint, then down to the shore to see the Jacobite Monument.</p></div></div></li><li class="leg"><time>16:30–17:15</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Glenfinnan → Ballachulish</span><span class="dist">~50 km</span></div></li><li class="stop"><time>17:15–18:30</time><h3><svg class="ic"><use href="#i-bed"/></svg>Check in &amp; relax</h3></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=9019641930817997657" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMqmVTh4p73ObzUkRWKrtc0Rb4MLgTuxAXgk7XCso7HXAga5dgyW2rhZxL3oZp_-jnpJ7LX98m-jyFPCH8Bsik0p1SAjzKScxfynRjfqp8laAZC_MoqOQC0i3HlNdX9ukOeXRVONNM2GJXEBXs=s300" loading="lazy" alt="The Laroch Restaurant, Ballachulish"></a><div class="stop-text"><time>18:30</time><h3><svg class="ic"><use href="#i-meal"/></svg>Highland dinner at The Laroch Restaurant</h3></div></div></li></ol>
   </section>
-
   <!-- DAY 6 -->
   <section class="day" id="day6" style="--leg:var(--loch)">
-    <div class="day-head">
-      <span class="day-num">06</span>
-      <div class="day-info">
-        <p class="day-date">Tuesday · 14 July</p>
-        <h2>Loch Lomond &amp; Departure</h2>
-        <p class="day-blurb">The loch road south, a stop at Britain's most-loved motorway services, and one long push back to Stansted for an evening flight.</p>
-        <div class="day-meta">
-          <span class="chip"><b>730 km</b> driven</span>
-          <span class="chip">20:30 flight home</span>
-          <span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~18°/11°C · ~55% rain <i>(typical, clearing south)</i></span>
-        </div>
-      </div>
-    </div>
-    <ol class="timeline">
-      <li class="leg"><time>07:45–08:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Final checkout, load the car</span><span class="dist"></span></div></li>
-      <li class="leg"><time>08:00–09:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Ballachulish → Luss</span><span class="dist">~110 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=11172081165377301983" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMscCbBnICWQomKXWVsGuLYf_V-8B3Wwz0K_wdT2WNjsU3Ao8HDqWvPQXkH6B7DHVO5wvWMUIaaUK_u8i5iHBG9W0rnti7T-0O6Neawi2fLYoTsT9LkVXKUBZTE8SUrJd4xFcn1xrkDdo6j1Q=s300" loading="lazy" alt="Coach House Coffee Shop, Luss"></a>
-          <div class="stop-text">
-            <time>09:30–10:30</time>
-            <h3><svg class="ic"><use href="#i-coffee"/></svg>Breakfast at the Coach House, Luss</h3>
-            <p>Then out onto the village pier for fresh air and photos over the water.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>10:30–13:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Luss → Tebay Services (M6)</span><span class="dist">~270 km</span></div></li>
-      <li class="stop">
-        <div class="stop-flex">
-          <a class="thumb" href="https://maps.google.com/?cid=11111819008961779715" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFYuX1azCQZm1zQwXaL9oynZG-yOHlvqw2oeAU3dXUhoUw3PSzN2LtvzrTQQ8lkUCtTYoEIs4-3IPy3uo3_YTzY1BDAtciPXuf3w_hHmlYfqGyEtwDeABCwkpn4TejvCTqNuDwtKMBi9bKIAT1m74BvQ=s300" loading="lazy" alt="Tebay Services"></a>
-          <div class="stop-text">
-            <time>13:30–14:30</time>
-            <h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at Tebay Services</h3>
-            <p>The UK's only family-run motorway services, with a farm shop, a duck pond and excellent Cumbrian food.</p>
-          </div>
-        </div>
-      </li>
-      <li class="leg"><time>14:30–17:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Tebay → Stansted Airport</span><span class="dist">~350 km</span></div></li>
-      <li class="leg"><time>17:30–18:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Refuel, drop off the car, shuttle to the terminal</span><span class="dist"></span></div></li>
-      <li class="stop"><time>18:00–18:30</time><h3><svg class="ic"><use href="#i-flight"/></svg>Clear security</h3><p></p></li>
-      <li class="stop"><time>18:30–20:30</time><h3><svg class="ic"><use href="#i-flight"/></svg>Departure lounge, then board</h3><p>Dinner in the lounge before the 20:30 flight.</p></li>
-    </ol>
+    <div class="day-head"><span class="day-num">06</span><div class="day-info"><p class="day-date">Tuesday · 14 July</p><h2>Loch Lomond &amp; Departure</h2><p class="day-blurb">The loch road south, a stop at Britain's most-loved motorway services, and one long push back to Stansted for an evening flight.</p><div class="day-meta"><span class="chip"><b>730 km</b> driven</span><span class="chip">20:30 flight home</span><span class="chip"><svg class="ic"><use href="#i-weather"/></svg>~18°/11°C · ~55% rain <i>(typical, clearing south)</i></span></div></div></div>
+    <ol class="timeline"><li class="leg"><time>07:45–08:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Final checkout, load the car</span></div></li><li class="leg"><time>08:00–09:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Ballachulish → Luss</span><span class="dist">~110 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=11172081165377301983" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMscCbBnICWQomKXWVsGuLYf_V-8B3Wwz0K_wdT2WNjsU3Ao8HDqWvPQXkH6B7DHVO5wvWMUIaaUK_u8i5iHBG9W0rnti7T-0O6Neawi2fLYoTsT9LkVXKUBZTE8SUrJd4xFcn1xrkDdo6j1Q=s300" loading="lazy" alt="Coach House Coffee Shop, Luss"></a><div class="stop-text"><time>09:30–10:30</time><h3><svg class="ic"><use href="#i-coffee"/></svg>Breakfast at the Coach House, Luss</h3><p>Then out onto the village pier for fresh air and photos over the water.</p></div></div></li><li class="leg"><time>10:30–13:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Luss → Tebay Services (M6)</span><span class="dist">~270 km</span></div></li><li class="stop"><div class="stop-flex"><a class="thumb" href="https://maps.google.com/?cid=11111819008961779715" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOFYuX1azCQZm1zQwXaL9oynZG-yOHlvqw2oeAU3dXUhoUw3PSzN2LtvzrTQQ8lkUCtTYoEIs4-3IPy3uo3_YTzY1BDAtciPXuf3w_hHmlYfqGyEtwDeABCwkpn4TejvCTqNuDwtKMBi9bKIAT1m74BvQ=s300" loading="lazy" alt="Tebay Services"></a><div class="stop-text"><time>13:30–14:30</time><h3><svg class="ic"><use href="#i-meal"/></svg>Lunch at Tebay Services</h3><p>The UK's only family-run motorway services, with a farm shop, a duck pond and excellent Cumbrian food.</p></div></div></li><li class="leg"><time>14:30–17:30</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Tebay → Stansted Airport</span><span class="dist">~350 km</span></div></li><li class="leg"><time>17:30–18:00</time><div class="leg-row"><svg class="ic"><use href="#i-drive"/></svg><span class="route">Refuel, drop off the car, shuttle to the terminal</span></div></li><li class="stop"><time>18:00–18:30</time><h3><svg class="ic"><use href="#i-flight"/></svg>Clear security</h3></li><li class="stop"><time>18:30–20:30</time><h3><svg class="ic"><use href="#i-flight"/></svg>Departure lounge, then board</h3><p>Dinner in the lounge before the 20:30 flight.</p></li></ol>
   </section>
-
-  <!-- PACKING LIST -->
-  <section class="pack" id="pack">
-    <h2>What to pack</h2>
-    <p class="lead">Tick things off as you go — this only saves while the page stays open, so pack in one sitting or screenshot it.</p>
-    <div class="pack-grid">
-      <div class="pack-card">
-        <svg class="ic"><use href="#i-shirt"/></svg>
-        <h3>Clothing &amp; layers</h3>
-        <ul>
-          <li><label><input type="checkbox"><span>Lightweight waterproof jacket — the Highlands stretch sees rain most days</span></label></li>
-          <li><label><input type="checkbox"><span>A warm layer for evenings — fleece or jumper</span></label></li>
-          <li><label><input type="checkbox"><span>Breathable tops for city walking</span></label></li>
-          <li><label><input type="checkbox"><span>A scarf or beanie for Calton Hill and the Three Sisters viewpoint</span></label></li>
-        </ul>
-      </div>
-      <div class="pack-card">
-        <svg class="ic"><use href="#i-boot"/></svg>
-        <h3>Footwear</h3>
-        <ul>
-          <li><label><input type="checkbox"><span>Broken-in walking shoes — cobbles in York and Edinburgh</span></label></li>
-          <li><label><input type="checkbox"><span>Waterproof boots for the Glencoe and Glenfinnan trails</span></label></li>
-          <li><label><input type="checkbox"><span>A spare pair for evenings out</span></label></li>
-        </ul>
-      </div>
-      <div class="pack-card">
-        <svg class="ic"><use href="#i-view"/></svg>
-        <h3>Highlands &amp; outdoors</h3>
-        <ul>
-          <li><label><input type="checkbox"><span>Midge repellent — Loch Shiel, Ballachulish and the Loch Lomond shore all get them</span></label></li>
-          <li><label><input type="checkbox"><span>A small day pack for the Glencoe and Glenfinnan walks</span></label></li>
-          <li><label><input type="checkbox"><span>A reusable water bottle</span></label></li>
-          <li><label><input type="checkbox"><span>A portable charger — signal and charging points thin out fast</span></label></li>
-        </ul>
-      </div>
-      <div class="pack-card">
-        <svg class="ic"><use href="#i-doc"/></svg>
-        <h3>Documents &amp; driving</h3>
-        <ul>
-          <li><label><input type="checkbox"><span>Driving licence (and an IDP if yours needs one)</span></label></li>
-          <li><label><input type="checkbox"><span>Rental car confirmation and insurance documents</span></label></li>
-          <li><label><input type="checkbox"><span>Boarding passes and passports</span></label></li>
-          <li><label><input type="checkbox"><span>Offline maps downloaded for the Highlands stretch</span></label></li>
-        </ul>
-      </div>
-      <div class="pack-card">
-        <svg class="ic"><use href="#i-phone"/></svg>
-        <h3>Tech &amp; comfort</h3>
-        <ul>
-          <li><label><input type="checkbox"><span>Phone and charging cable</span></label></li>
-          <li><label><input type="checkbox"><span>A camera — Calton Hill, Glenfinnan and the Three Sisters are all worth it</span></label></li>
-          <li><label><input type="checkbox"><span>A travel pillow for the early and late legs</span></label></li>
-          <li><label><input type="checkbox"><span>Snacks for the Tebay-to-Stansted drive</span></label></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- TIPS -->
-  <section class="tips" id="tips">
-    <h2>Driving in the UK</h2>
-    <p class="lead">A few things worth knowing before you pick up the keys at Stansted.</p>
-    <div class="tip-grid">
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-drive"/></svg>
-        <h3>Stay left</h3>
-        <p>Traffic keeps to the left and roundabouts run clockwise — give way to anyone already on the roundabout, coming from your right.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-drive"/></svg>
-        <h3>Mind the mph</h3>
-        <p>Limits are in miles per hour: 70 on motorways, 60 on most single-carriageway A-roads, and as low as 20 through town centres. Average-speed cameras are common on the A1, so cruise at the limit rather than the flow of traffic.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-drive"/></svg>
-        <h3>Check the fuel cap</h3>
-        <p>Confirm petrol or diesel at the rental desk — both pumps sit side by side at every station and the cars look identical.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-sight"/></svg>
-        <h3>London's charges</h3>
-        <p>If you park near King's Cross on the Friday, check whether the spot sits inside the Congestion Charge zone — it's £18 on weekdays, 7am to 6pm. Almost all modern rental cars meet the ULEZ emissions standard, so that charge shouldn't apply, but it's worth confirming on the TfL site beforehand.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-bed"/></svg>
-        <h3>Park on the edge, walk the middle</h3>
-        <p>Cambridge, York and Edinburgh all have narrow medieval centres with restricted or pedestrianised streets. Use a car park on the edge of town and cover the old town on foot.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-view"/></svg>
-        <h3>Passing places aren't parking spaces</h3>
-        <p>The roads around Glencoe, Glenfinnan and Loch Lomond narrow to a single track in places. Pull into a passing place on your left for oncoming traffic, or wait opposite one if it's on the right — and never park in one. A wave to say thanks is standard.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-drive"/></svg>
-        <h3>Fuel up before the glens</h3>
-        <p>Petrol stations thin out fast once you're off the main road. Top up in Glencoe or Fort William before the Glenfinnan loop, and again before the long final push south.</p>
-      </div>
-      <div class="tip-card">
-        <svg class="ic"><use href="#i-view"/></svg>
-        <h3>Pack for midges</h3>
-        <p>Highland midges come out in force on calm summer evenings near water — expect them at Loch Shiel, Ballachulish and the Loch Lomond shore. A repellent earns its space in the car.</p>
-      </div>
-    </div>
-  </section>
-
+  <section class="pack" id="pack"><h2>What to pack</h2><p class="lead">Tick things off as you go — this only saves while the page stays open, so pack in one sitting or screenshot it.</p><div class="pack-grid"><div class="pack-card"><svg class="ic"><use href="#i-shirt"/></svg><h3>Clothing &amp; layers</h3><ul><li><label><input type="checkbox"><span>Lightweight waterproof jacket — the Highlands stretch sees rain most days</span></label></li><li><label><input type="checkbox"><span>A warm layer for evenings — fleece or jumper</span></label></li><li><label><input type="checkbox"><span>Breathable tops for city walking</span></label></li><li><label><input type="checkbox"><span>A scarf or beanie for Calton Hill and the Three Sisters viewpoint</span></label></li></ul></div><div class="pack-card"><svg class="ic"><use href="#i-boot"/></svg><h3>Footwear</h3><ul><li><label><input type="checkbox"><span>Broken-in walking shoes — cobbles in York and Edinburgh</span></label></li><li><label><input type="checkbox"><span>Waterproof boots for the Glencoe and Glenfinnan trails</span></label></li><li><label><input type="checkbox"><span>A spare pair for evenings out</span></label></li></ul></div><div class="pack-card"><svg class="ic"><use href="#i-view"/></svg><h3>Highlands &amp; outdoors</h3><ul><li><label><input type="checkbox"><span>Midge repellent — Loch Shiel, Ballachulish and the Loch Lomond shore all get them</span></label></li><li><label><input type="checkbox"><span>A small day pack for the Glencoe and Glenfinnan walks</span></label></li><li><label><input type="checkbox"><span>A reusable water bottle</span></label></li><li><label><input type="checkbox"><span>A portable charger — signal and charging points thin out fast</span></label></li></ul></div><div class="pack-card"><svg class="ic"><use href="#i-doc"/></svg><h3>Documents &amp; driving</h3><ul><li><label><input type="checkbox"><span>Driving licence (and an IDP if yours needs one)</span></label></li><li><label><input type="checkbox"><span>Rental car confirmation and insurance documents</span></label></li><li><label><input type="checkbox"><span>Boarding passes and passports</span></label></li><li><label><input type="checkbox"><span>Offline maps downloaded for the Highlands stretch</span></label></li></ul></div><div class="pack-card"><svg class="ic"><use href="#i-phone"/></svg><h3>Tech &amp; comfort</h3><ul><li><label><input type="checkbox"><span>Phone and charging cable</span></label></li><li><label><input type="checkbox"><span>A camera — Calton Hill, Glenfinnan and the Three Sisters are all worth it</span></label></li><li><label><input type="checkbox"><span>A travel pillow for the early and late legs</span></label></li><li><label><input type="checkbox"><span>Snacks for the Tebay-to-Stansted drive</span></label></li></ul></div></div></section>
+  <section class="tips" id="tips"><h2>Driving in the UK</h2><p class="lead">A few things worth knowing before you pick up the keys at Stansted.</p><div class="tip-grid"><div class="tip-card"><svg class="ic"><use href="#i-drive"/></svg><h3>Stay left</h3><p>Traffic keeps to the left and roundabouts run clockwise — give way to anyone already on the roundabout, coming from your right.</p></div><div class="tip-card"><svg class="ic"><use href="#i-drive"/></svg><h3>Mind the mph</h3><p>Limits are in miles per hour: 70 on motorways, 60 on most single-carriageway A-roads, and as low as 20 through town centres. Average-speed cameras are common on the A1, so cruise at the limit rather than the flow of traffic.</p></div><div class="tip-card"><svg class="ic"><use href="#i-drive"/></svg><h3>Check the fuel cap</h3><p>Confirm petrol or diesel at the rental desk — both pumps sit side by side at every station and the cars look identical.</p></div><div class="tip-card"><svg class="ic"><use href="#i-sight"/></svg><h3>London's charges</h3><p>If you park near King's Cross on the Friday, check whether the spot sits inside the Congestion Charge zone — it's £18 on weekdays, 7am to 6pm. Almost all modern rental cars meet the ULEZ emissions standard, so that charge shouldn't apply, but it's worth confirming on the TfL site beforehand.</p></div><div class="tip-card"><svg class="ic"><use href="#i-bed"/></svg><h3>Park on the edge, walk the middle</h3><p>Cambridge, York and Edinburgh all have narrow medieval centres with restricted or pedestrianised streets. Use a car park on the edge of town and cover the old town on foot.</p></div><div class="tip-card"><svg class="ic"><use href="#i-view"/></svg><h3>Passing places aren't parking spaces</h3><p>The roads around Glencoe, Glenfinnan and Loch Lomond narrow to a single track in places. Pull into a passing place on your left for oncoming traffic, or wait opposite one if it's on the right — and never park in one. A wave to say thanks is standard.</p></div><div class="tip-card"><svg class="ic"><use href="#i-drive"/></svg><h3>Fuel up before the glens</h3><p>Petrol stations thin out fast once you're off the main road. Top up in Glencoe or Fort William before the Glenfinnan loop, and again before the long final push south.</p></div><div class="tip-card"><svg class="ic"><use href="#i-view"/></svg><h3>Pack for midges</h3><p>Highland midges come out in force on calm summer evenings near water — expect them at Loch Shiel, Ballachulish and the Loch Lomond shore. A repellent earns its space in the car.</p></div></div></section>
 </main>
-
-<footer>
-  <p>Six days · two countries · one car. Safe travels.</p>
-</footer>
-
+<footer><p>Six days · two countries · one car. Safe travels.</p></footer>
 <script>
   var STORAGE_KEY = 'the-long-way-round-packlist';
   var fadeTargets = document.querySelectorAll('.day, .tips, .pack');
   var packChecks = Array.prototype.slice.call(document.querySelectorAll('.pack-card input[type="checkbox"]'));
-
-  function setReducedMotionStyles() {
-    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.documentElement.style.scrollBehavior = 'auto';
-  }
-
-  function restorePackState() {
-    try {
-      var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-      packChecks.forEach(function (input, index) {
-        if (Object.prototype.hasOwnProperty.call(saved, index)) {
-          input.checked = !!saved[index];
-        }
-      });
-    } catch (e) {}
-  }
-
-  function persistPackState() {
-    try {
-      var saved = {};
-      packChecks.forEach(function (input, index) {
-        saved[index] = input.checked;
-      });
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-    } catch (e) {}
-  }
-
-  setReducedMotionStyles();
-  restorePackState();
-  packChecks.forEach(function (input) {
-    input.addEventListener('change', persistPackState);
-  });
-
-  if ('IntersectionObserver' in window) {
-    var fadeObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) entry.target.classList.add('in-view');
-      });
-    }, { threshold: 0.12 });
-    fadeTargets.forEach(function (t) { fadeObs.observe(t); });
-
-    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.daynav a'));
-    var navSections = document.querySelectorAll('.day, .tips, .pack');
-    var navObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          navLinks.forEach(function (a) {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
-          });
-        }
-      });
-    }, { rootMargin: '-50% 0px -45% 0px' });
-    navSections.forEach(function (t) { navObs.observe(t); });
-  } else {
-    fadeTargets.forEach(function (t) { t.classList.add('in-view'); });
-  }
+  function setReducedMotionStyles() { if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; document.documentElement.style.scrollBehavior = 'auto'; }
+  function restorePackState() { try { var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); packChecks.forEach(function (input, index) { if (Object.prototype.hasOwnProperty.call(saved, index)) { input.checked = !!saved[index]; } }); } catch (e) {} }
+  function persistPackState() { try { var saved = {}; packChecks.forEach(function (input, index) { saved[index] = input.checked; }); localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch (e) {} }
+  setReducedMotionStyles(); restorePackState(); packChecks.forEach(function (input) { input.addEventListener('change', persistPackState); });
+  if ('IntersectionObserver' in window) { var fadeObs = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) entry.target.classList.add('in-view'); }); }, { threshold: 0.12 }); fadeTargets.forEach(function (t) { fadeObs.observe(t); }); var navLinks = Array.prototype.slice.call(document.querySelectorAll('.daynav a')); var navSections = document.querySelectorAll('.day, .tips, .pack'); var navObs = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { navLinks.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id); }); } }); }, { rootMargin: '-50% 0px -45% 0px' }); navSections.forEach(function (t) { navObs.observe(t); }); } else { fadeTargets.forEach(function (t) { t.classList.add('in-view'); }); }
 </script>
-
 </body>
 </html>
